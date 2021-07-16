@@ -1,37 +1,68 @@
-//
-//  AppDelegate.swift
-//  lok2client
-//
-//  Created by Филипп Бесядовский on 22.09.2020.
-//  Copyright © 2020 dimfcompany. All rights reserved.
-//
-
 import UIKit
+import IQKeyboardManagerSwift
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
+    static var gi:AppDelegate!
+    var window: UIWindow?
+    var nav_controller:BaseNavController!
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    {
+        AppDelegate.gi = self
+        IQKeyboardManager.shared.enable = true
+        UNUserNotificationCenter.current().delegate = NotificationManager.gi
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        nav_controller = BaseNavController()
+        window!.rootViewController = nav_controller
+        window!.makeKeyAndVisible()
+        //        var coordinator_auth = CoordinatorAuth(nav_controller: nav_controller)
+        //        coordinator_auth.start()
+        
+        if(LocalData.getCurrentUser() != nil)
+        {
+            startMain()
+        }
+        else
+        {
+            startAuth()
+        }
+        
+        runActionWithDelay(milliseconds: 30, action:
+            {
+                self.nav_controller.pushViewController(VcSplash(), animated: false)
+        })
+        
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    private func test()
+    {
+        let device = getDeviceName()
+        print("Device is \(device)")
+        
+        let push_token = LocalData.getPushToken()
+        print("Push token is \(push_token)")
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    func startAuth()
+    {
+//        nav_controller.viewControllers = []
+        var coordinator_auth = CoordinatorAuth(nav_controller: nav_controller)
+        coordinator_auth.toLogin()
     }
-
-
+    
+    func startMain()
+    {
+//        nav_controller.viewControllers = []
+        var coordinator_main = CoordinatorMain(nav_controller: nav_controller)
+        coordinator_main.toScreenMain()
+    }
+    
 }
 

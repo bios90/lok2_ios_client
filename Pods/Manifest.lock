@@ -1,0 +1,95 @@
+PODS:
+  - Alamofire (5.0.5)
+  - DeepDiff (2.3.1)
+  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - MaterialComponents/AnimationTiming (109.3.1)
+  - MaterialComponents/Availability (109.3.1)
+  - MaterialComponents/private/Color (109.3.1):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (109.3.1)
+  - MaterialComponents/Ripple (109.3.1):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - Nuke (9.1.2)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - PryntTrimmerView (4.0.0)
+  - QuickLayout (3.0.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SnapKit (5.0.1)
+  - SteviaLayout (4.7.3)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
+  - SwiftGifOrigin (1.7.0)
+  - YPImagePicker (4.2.0):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.7.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0)
+  - DeepDiff
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 5.0)
+  - MaterialComponents/Ripple
+  - Nuke (~> 9.0)
+  - NVActivityIndicatorView
+  - RxCocoa (~> 5)
+  - RxSwift (~> 5)
+  - SnapKit (~> 5.0.0)
+  - SwiftEntryKit (= 1.2.3)
+  - SwiftGifOrigin (~> 1.7.0)
+  - YPImagePicker
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DeepDiff
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - MaterialComponents
+    - Nuke
+    - NVActivityIndicatorView
+    - PryntTrimmerView
+    - QuickLayout
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SteviaLayout
+    - SwiftEntryKit
+    - SwiftGifOrigin
+    - YPImagePicker
+
+SPEC CHECKSUMS:
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  DeepDiff: e5ae6c50d0321568e4508cec5930b9f10bb293fc
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  MaterialComponents: 7675cd4b1c9f660b63cddeb725b2de853790402b
+  Nuke: dd2e6be6a34c042a7861e190632781d11f253026
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  YPImagePicker: accf310f9526641a84372c0ecf943547d9b1e52c
+
+PODFILE CHECKSUM: a8a364e454db183453aa7b94a908683f0b76a873
+
+COCOAPODS: 1.9.1
